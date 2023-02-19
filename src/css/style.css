@@ -1,0 +1,64 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+header nav{
+    height: 52px;
+    background: #212121;  
+}
+.menu{
+    padding: 10px 70px;
+    justify-content: space-between;
+    margin: 0;
+    display:flex;
+    list-style-type: none;
+}
+.menu_link{
+    font-weight: 300;
+    font-size: 15px; 
+    color: #FFFFFF;
+    text-decoration: none;
+    border-right: 2px dotted black;
+    padding-right: 48px;
+}
+header .subheader{
+    height: 86px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.subheader .subheader_logo{
+    margin-top: 18px;
+}
+.subheader .subheader_official{
+    font-weight: 100;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.subheader .subheader_call{
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+    color: #FFFFFF;
+}
+.subheader .subheader_number{
+    display: block;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.subheader .subheader_btn{
+    margin-top: 22px;
+    width: 172px;
+    height: 46px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
