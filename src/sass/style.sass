@@ -133,6 +133,9 @@ header
 	font-weight: 300 
 	text-transform: uppercase 
 	text-align: center
+	&_white
+		background-color: #ffffff 
+		color: #000000 
 .title 
 	margin-top: 32px 
 	font-weight: 700 
@@ -140,4 +143,70 @@ header
 	text-align: center 
 	text-transform: uppercase 
 	color: #222222 
+	&_white
+		color: #ffffff 
+.subtitle
+	font-weight: 400
+	font-size: 17px
+	text-align: center
+	color: #222222
+	&_white
+		color: #ffffff 
+.mobile
+	height: 864px
+	padding: 48px 0 80px 0
+	background: url('../img/bg/mobile_bg.png') center center/cover no-repeat
+	.row
+		margin-top: 30px
+	&_item
+		position: relative
+		width: 320px
+		height: 280px
+		margin: 0 auto
+		margin-bottom: 20px
+		padding-top: 92px
+		&_1
+			background: url('../img/card_1.jpg') center center/cover no-repeat
+		&_2
+			background: url('../img/card_2.jpg') center center/cover no-repeat
+		&_3
+			background: url('../img/card_3.jpg') center center/cover no-repeat
+		&_4
+			background: url('../img/card_4.jpg') center center/cover no-repeat
+		&_5
+			background: url('../img/card_5.jpg') center center/cover no-repeat
+		&_6
+			background: url('../img/card_6.jpg') center center/cover no-repeat
+		&_subtitle
+			font-weight: 400
+			font-size: 24px
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+		&_plus
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			bottom: 34px
+			left: 50%
+			transform: translateX(-50%)
+			width: 29px
+			height: 29px
+			background: #000000
+			border-radius: 100%
+			cursor: pointer
+.choices
+	padding: 60px 0 136px 0
+	height: 898px
+	background: url('../img/choices.jpg') center center/cover no-repeat
+	&_img
+		display: block
+		margin: 0 auto
+		margin-top: 54px
+	&_text
+		font-weight: 300
+		font-size: 17px
+		text-align: center
+		color: #222222
 
