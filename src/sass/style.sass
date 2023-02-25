@@ -1,3 +1,12 @@
+$main_color: #1eacc7
+$optional_color: #FF5656
+$button_color: #1EACC7 0%, #4CE2FF 100%
+
+@mixin btn_hover
+	&:hover
+		background-image: none
+		background-color: $main_color
+		
 * 
 	font-family: 'Roboto', sans-serif 
 header 
@@ -51,7 +60,7 @@ header
 		margin-top: 22px 
 		width: 172px 
 		height: 46px 
-		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%) 
+		background: linear-gradient(0deg, $button_color) 
 		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12) 
 		border: none 
 		border-radius: 4px 
@@ -60,7 +69,8 @@ header
 		text-align: center 
 		text-transform: uppercase 
 		color: #FFFFFF 
-		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21) 
+		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		@include btn_hover
 .promo 
 	text-align: center 
 	height: 800px 
@@ -84,7 +94,7 @@ header
 	&_btn 
 		width: 259px 
 		height: 63px 
-		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%) 
+		background: linear-gradient(0deg, $button_color) 
 		box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12) 
 		border: none 
 		border-radius: 4px 
@@ -94,6 +104,7 @@ header
 		color: #FFFFFF 
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21) 
 		margin-top: 114px 
+		@include btn_hover
 .reasons 
 	padding: 16px 0 64px 0 
 	min-height: 850px
@@ -109,14 +120,14 @@ header
 		margin-right: 26px 
 		width: 113px 
 		height: 113px 
-		background-color: #1eacc7 
+		background-color: $main_color 
 		border-radius: 100% 
 	&_descr 
 		width: 370px 
 	&_subtitle 
 		font-weight: 400 
 		font-size: 17px 
-		color: #1EACC7 
+		color: $main_color 
 	&_text 
 		font-weight: 300 
 		font-size: 15px 
@@ -185,6 +196,7 @@ header
 			color: #FFFFFF
 		&_plus
 			display: flex
+			position: relative
 			justify-content: center
 			align-items: center
 			position: absolute
@@ -196,6 +208,42 @@ header
 			background: #000000
 			border-radius: 100%
 			cursor: pointer
+			transition: 0.3s all
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 14px
+				height: 2px
+				background-color: $main_color
+				transition: 0.3s all
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				width: 2px
+				height: 14px
+				background-color: $main_color
+				transition: 0.3s all
+			&:hover
+				&::before
+					content: ''
+					position: absolute
+					top: 40%
+					width: 14px
+					height: 2px
+					transition: 0.3s all
+				&::after
+					content: ''
+					position: absolute
+					bottom: 30%
+					width: 14px
+					height: 2px
+					transition: 0.3s all
 .choices
 	padding: 60px 0 136px 0
 	height: 898px
@@ -209,4 +257,43 @@ header
 		font-size: 17px
 		text-align: center
 		color: #222222
+.require
+	padding: 66px 0 88px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+	&_title
+		font-weight: 400
+		font-size: 22px
+		color: $main_color
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			font-weight: 300
+			font-size: 17px
+			color: #222222
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 21px
+				height: 20px
+				background: url('../icons/check_blue.png') center center/cover no-repeat
+	&_descr
+		font-weight: 300
+		font-size: 17px
+		color: $main_color
+	.warning
+		.require_title
+			color: $optional_color
+		.require_list
+			li
+				&::before
+					background: url('../icons/check_red.png') center center/cover no-repeat
 
